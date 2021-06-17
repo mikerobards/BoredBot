@@ -6,12 +6,14 @@
 const ideaText = document.getElementById('idea-text')
 const ideaBtn = document.getElementById('idea-btn')
 
+const showActivity = (data) => {
+    ideaText.textContent = `${data.activity}`
+}
+
 ideaBtn.addEventListener('click', () => {
     fetch('https://apis.scrimba.com/bored/api/activity')
         .then(response => response.json())
-        .then(data => {
-            ideaText.textContent = `${data.activity}`
-        })
+        .then(data => showActivity(data))
 })
 
 
