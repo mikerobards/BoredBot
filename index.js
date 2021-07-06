@@ -5,9 +5,12 @@
 
 const ideaText = document.getElementById('idea-text')
 const ideaBtn = document.getElementById('idea-btn')
+const titleEl = document.getElementById('title')
 
 const showActivity = (data) => {
     ideaText.textContent = `${data.activity}`
+    titleEl.textContent = "🦾 HappyBot🦿"
+    document.body.classList.add('fun')
 }
 
 ideaBtn.addEventListener('click', () => {
